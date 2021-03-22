@@ -31,10 +31,12 @@ jxRequirements:
     provider: minikube
   environments:
   - key: dev
+    owner: wanzirong
+    repository: test-jk-x
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: 192.168.64.3.nip.io
     externalDNS: false
     kind: ingress
     namespaceSubDomain: -jx.
@@ -42,6 +44,8 @@ jxRequirements:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: wanzirong
   repository: bucketrepo
   secretStorage: local
   vault: {}
